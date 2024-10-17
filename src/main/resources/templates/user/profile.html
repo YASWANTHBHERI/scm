@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+<title data-th-text="${loggedInUser.name}+' | PROFILE'"></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<div id="content">
+
+		<!-- Side Bar  -->
+		<div data-th-replace="~{user/sidebar::sidebar}"></div>
+
+		<div class="md:pl-64 pt-20">
+			<div class="flex justify-center flex-col items-center">
+				<h1 class="text-4xl pb-3">Welcome to Profile Page</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		console.log("Profile page")
+	</script>
+</body>
+</html>
